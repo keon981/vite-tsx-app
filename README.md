@@ -3,13 +3,15 @@
 ## 套件
 ### vite-tsconfig-paths 
 > 如果有使用 TypeScript 的話，可以直接搭配使用 vite-tsconfig-paths，然後就會讀取 tsconfig 中的設置自動為vite配置路徑。
-```
-import tsconfigPaths from 'vite-tsconfig-paths';
-
-export default defineConfig({
-  plugins: [tsconfigPaths()],
-});
-```
+* 安裝：`npm i -D vite-tsconfig-paths `
+* 配置：
+  ```
+  import tsconfigPaths from 'vite-tsconfig-paths';
+  
+  export default defineConfig({
+    plugins: [tsconfigPaths()],
+  });
+  ```
 
 ### eslint-plugin-import
 > 用於檢查ES Module 的導入和導出代碼，防止文件路徑和導入名稱拼寫錯誤的問題。
