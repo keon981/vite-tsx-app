@@ -18,8 +18,10 @@
 * 安裝：`npm i -D eslint-plugin-import `
 * 基礎配置：
   ```
+  {
     "extends" :  [ "plugin:import/recommended" ] ,
-    plugins" :  "eslint-plugin-import" 
+    "plugins" :  ["react","eslint-plugin-import","@typescript-eslint"]
+  }
   ```
 
 ### eslint-import-resolver-typescript
