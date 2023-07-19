@@ -4,6 +4,17 @@
 ### vite-tsconfig-paths 
 > 如果有使用 TypeScript 的話，可以直接搭配使用 vite-tsconfig-paths，然後就會讀取 tsconfig 中的設置自動為vite配置路徑。
 * 安裝：`npm install --save-dev vite-tsconfig-paths `
+*  tsconfig.json 配置：
+  ```
+  {
+    "compilerOptions": {
+      "paths": {
+        "@": ["src"],
+        "#": ["public"],
+      }
+    }
+  }
+  ```
 * 基礎配置：
   ```
   import tsconfigPaths from 'vite-tsconfig-paths';
