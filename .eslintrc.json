@@ -30,7 +30,15 @@
   ],
   "settings": {
     "import/resolver": {
-      "typescript": {}
+      "typescript": {},
+      "alias": {
+        "map": [
+          [
+            "@",
+            "./src"
+          ]
+        ],
+      }
     }
   },
   "rules": {
