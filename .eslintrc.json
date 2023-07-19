@@ -25,12 +25,13 @@
   },
   "plugins": [
     "react",
+    "eslint-plugin-import",
     "@typescript-eslint"
   ],
   "settings": {
     "import/resolver": {
       "typescript": {}
-    },
+    }
   },
   "rules": {
     "semi": [
