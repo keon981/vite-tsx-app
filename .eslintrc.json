@@ -26,7 +26,7 @@
   "plugins": [
     "react",
     "@typescript-eslint",
-    "eslint-plugin-import",
+    "eslint-plugin-import"
   ],
   "settings": {
     "import/resolver": {
@@ -37,7 +37,7 @@
             "@",
             "./src"
           ]
-        ],
+        ]
       }
     }
   },
