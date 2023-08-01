@@ -11,6 +11,7 @@
     "skipLibCheck": true,
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
@@ -21,15 +22,16 @@
     "types": [
       "vite-plugin-svgr/client"
     ],
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "@": [
-        "src"
-      ],
+      "@/*": [
+        "./src"
+      ]
     }
   },
   "include": [
-    "src"
+    "src",
+    "vite.config.ts"
   ],
   "references": [
     {
