@@ -9,7 +9,8 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "allowJs": false,
+    "esModuleInterop": true,
+    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "bundler",
@@ -21,14 +22,23 @@
     "types": [
       "vite-plugin-svgr/client"
     ],
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@": [
-        "src"
-      ],
+        "src/"
+      ]
     }
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }
