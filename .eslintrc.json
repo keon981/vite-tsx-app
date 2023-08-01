@@ -6,12 +6,11 @@
   "extends": [
     "airbnb",
     "plugin:react/recommended",
-    "airbnb-typescript",
-    "plugin:import/recommended"
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "airbnb-typescript"
   ],
-  "ignorePatterns": [
-    "vite.config.ts"
-  ],
+  // Specifying Parser
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": [
@@ -21,76 +20,45 @@
       "jsx": true
     },
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "tsconfigRootDir": "."
   },
+  // Configuring third-party plugins
   "plugins": [
-    "react",
+    "eslint-plugin-import",
     "@typescript-eslint",
-    "eslint-plugin-import"
+    "react",
+    "react-hooks"
   ],
   "settings": {
     "import/resolver": {
-      "typescript": {},
-      "alias": {
-        "map": [
-          [
-            "@",
-            "./src"
-          ]
-        ]
-      }
+      "typescript": {}
     }
   },
+  "ignorePatterns": [
+    "vite.config.ts"
+  ],
   "rules": {
-    "semi": [
-      "error",
-      "never"
-    ],
-    "import/no-absolute-path": "off",
-    "react-refresh/only-export-components": "off",
-    "@typescript-eslint/no-non-null-assertion": "off",
-    "camelcase": "off",
-    "max-len": [
-      "error",
-      {
-        "code": 120
-      }
-    ],
-    "react/react-in-jsx-scope": "off", // for missing 'import React' in files
-    "react/jsx-one-expression-per-line": "off",
-    "react/require-default-props": "off",
-    "react/jsx-props-no-spreading": "off",
-    "react/function-component-definition": "off",
-    "@typescript-eslint/explicit-function-return-type": "off", // function 回傳無需標記回傳型態
-    "@typescript-eslint/strict-boolean-expressions": "off", // 無需寫出完整判斷式
-    "comma-dangle": "off", // 允許逗號可尾隨
-    "@typescript-eslint/comma-dangle": [
-      "error",
-      {
-        "arrays": "always-multiline",
-        "objects": "always-multiline",
-        "imports": "always-multiline",
-        "exports": "always-multiline",
-        "functions": "always-multiline"
-      }
-    ],
-    "@typescript-eslint/member-delimiter-style": [
-      "error",
-      {
-        "multiline": {
-          "delimiter": "none",
-          "requireLast": true
-        },
-        "singleline": {
-          "delimiter": "semi",
-          "requireLast": false
-        }
-      }
-    ],
     "@typescript-eslint/semi": [
       "error",
       "never"
     ],
+    "import/no-absolute-path": "off",
+    "linebreak-style": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "import/no-named-default": "off",
     "import/order": [
       "error",
       {
@@ -116,20 +84,15 @@
         }
       }
     ],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          "test.{ts,tsx}", // repos with a single test file
-          "test-*.{ts,tsx}", // repos with multiple top-level test files
-          "**/*{.,_}{test,spec}.{ts,tsx}", // tests where the extension or filename suffix denotes that it is a test
-          "src/setupTests.ts" // setup
-        ],
-        "optionalDependencies": false
-      }
-    ],
-    "import/prefer-default-export": "off",
-    "import/no-named-default": "off",
+    "react-hooks/exhaustive-deps": "off",
+    // Enforce the use of the shorthand syntax.
+    "object-shorthand": "error",
+    "no-console": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-uses-react": 0,
     "no-plusplus": [
       "error",
       {
