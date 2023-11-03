@@ -1,9 +1,11 @@
 {
   "env": {
     "browser": true,
-    "es2020": true
+    "es2022": true
   },
   "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "airbnb",
     "plugin:react/recommended",
     "plugin:import/recommended",
@@ -39,7 +41,8 @@
     }
   },
   "ignorePatterns": [
-    "vite.config.ts"
+    "*.config.ts",
+    "*/*/setup.ts"
   ],
   "rules": {
     "@typescript-eslint/semi": [
