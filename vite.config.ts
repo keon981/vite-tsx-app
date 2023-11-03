@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// import react from '@vitejs/plugin-react'
+import react from "@vitejs/plugin-react-swc";
 import tsconfigPaths from 'vite-tsconfig-paths'
 import eslintPlugin from "vite-plugin-eslint";
 import path from "path"
