@@ -1,5 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
@@ -18,7 +17,17 @@ export default defineConfig({
       "@": path.resolve(__dirname, "src"),
     },
   },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    includeSource: ["src/__tests__/*.{js,tsx,ts}"],
+    setupFiles: 'src/__tests__/setup.ts',
+    coverage: {
+      reporter: ["text", "json", "html"],
+    },
+  },
   server: {
-    host: "0.0.0.0"
+    host: "0.0.0.0",
+    port: 8080
   },
 })
