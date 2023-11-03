@@ -1,87 +1,89 @@
-# v0.1.0 版本
+# Vite React simple template
+>
+> pnpm + React 18 + TypeScript + Vitest + Testing Library + ESlint
 
-## 套件
+## Overview
+>
+> Built with type safety, scalability, and developer experience in mind. A batteries included Vite + React template.
 
-### vite-tsconfig-paths
+* pnpm - A strict and efficient alternative to npm with up to 3x faster performance
+* TypeScript - A typed superset of JavaScript designed with large scale applications in mind
+* ESLint(Airbnb) - Static code analysis to help find problems within a codebase
+* Vite - Feature rich and highly optimized frontend tooling with TypeScript support out of the box
+* Vitest - A blazing fast unit test framework powered by Vite
+* React Testing Library - A very light-weight, best practice first, solution for testing React components
 
-> 如果有使用 TypeScript 的話，可以直接搭配使用 vite-tsconfig-paths，然後就會讀取 tsconfig 中的設置自動為 vite 配置路徑。
-> > 目前 v4.2.0 無法對 vite@4.2.0 以上的版本起作用，還是需要自行在vite.config.ts手動配置路徑。
+## Requirements
 
-- 安裝：`npm install --save-dev vite-tsconfig-paths`
-- 配置：
+* NodeJS 18+
+* pnpm
+
+## Getting Started
+
+Getting started is a simple as cloning the repository
 
 ```
-/* tsconfig.json */
-  {
-    "compilerOptions": {
-     "baseUrl": ".",
-      "paths": {
-        "@": ["src"],
-        "#": ["public"],
-      }
-    }
-  }
-
-/* vite.config.json */
-  import tsconfigPaths from 'vite-tsconfig-paths';
-
-  export default defineConfig({
-    plugins: [tsconfigPaths()],
-  });
+git clone git@github.com:keon981/vite-tsx-app.git
 ```
 
-### eslint-plugin-import
+Changing into the new directory
 
-> 用於檢查 ES Module 的導入和導出代碼，防止文件路徑和導入名稱拼寫錯誤的問題。
-> > 如果繼承風格有ts，要放在`"plugin:import/recommended"`後方，否則該ts風格會和eslint-plugin-import起衝突。
+```
+cd vite-tsx-app
+```
 
-- 安裝：`npm i -D eslint-plugin-import`
-- 基礎配置：{
+Removing the .git folder (and any additional files, folders or dependencies you may not need)
 
-  ```
-    "extends" :  [
-      "plugin:import/recommended"
-    ] ,
-    "plugins" :  [
-      "react",
-      "@typescript-eslint",
-      "eslint-plugin-import"
-    ]
-  }
-  ```
+```
+rm -rf .git
+```
 
-### eslint-import-resolver-typescript
+Installing dependencies
 
-> 由於 ESLint 並不會自動去讀 tsconfig.json 的檔案，這時候可以使用 eslint-import-resolver-typescript，然後在 .eslintrc 中使用。
+```
+pnpm install
+```
 
-- 安裝：`npm install --save-dev eslint-import-resolver-typescript`
-- 基礎配置：`settings.import/resolver.typescript` 設定至少為 `{}`，以免解析 import/module 位置錯誤
+And running the setup script (initializes git repository)
 
-  ```
-  {
-   "settings": {
-      "import/resolver": {
-        "typescript": {}
-      },
-    },
-  }
-  ```
+```
+pnpm run setup
+```
 
-- 路徑配置：map 的路徑是相對專案根目錄的，如果.eslintrc 不在根目錄下，改用 js 來配置絕對路徑( path.resolve(\_\_dirname, 'src'))。
+Congrats! You're ready to starting working on that new project!
 
-  ```
-  {
-   "settings" : {
-     "import/resolver" : {
-       "alias" : {
-         "map" : [[ "@" , "./src" ]],
-         "extensions" : [ ".js" , ".jsx" ]
-        }
-      }
-    }
-  }
-  ```
+If you'd rather run the commands above in one go, check out the command below:
 
-## 配置參考
+```
+git clone git@github.com:keon981/vite-tsx-app.git &&\
+cd vite-tsx-app &&\
+rm -rf .git &&\
+pnpm install &&\
+pnpm run setup
+```
 
-- [eslint-plugin-import Unable to resolve path to module](https://github.com/zhbhun/blog/issues/1)
+## Testing
+
+Unit testing is handled by React Testing Library and Vitest while End-to-End (E2E) Testing is conducted by Playwright.
+
+If you'd like to run all tests, Unit and E2E alike, execute the following command:
+
+```
+pnpm run test
+```
+
+### Unit Testing
+
+When running unit test scripts, it is assumed that unit tests will be colocated with the source files. Take a look at the placeholder README file in `src/components` for [an example](src/components/README.md).
+
+If you'd like to execute unit tests specifically, the below command will execute vitest:
+
+```
+pnpm run test:unit
+```
+
+If instead you are interested in coverage reporting, run:
+
+```
+pnpm run coverage
+```

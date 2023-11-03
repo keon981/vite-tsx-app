@@ -19,15 +19,15 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "strict": true,
-    "types": [
-      "vite-plugin-svgr/client"
-    ],
     "baseUrl": ".",
     "paths": {
       "@": [
         "src/"
       ]
-    }
+    },
+    "types": [
+      "vitest/globals"
+    ]
   },
   "include": [
     "src"
