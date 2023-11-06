@@ -10,8 +10,8 @@ import path from "path"
 export default defineConfig({
   plugins: [
     react(),
+    eslintPlugin(),
     tsconfigPaths(),
-    eslintPlugin()
   ],
   resolve: {
     alias: {
