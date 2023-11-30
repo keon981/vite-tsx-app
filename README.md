@@ -1,22 +1,23 @@
 # Vite React simple template
->
+
 > pnpm + React 18 + TypeScript + Vitest + Testing Library + ESlint
 
 ## Overview
->
+
 > Built with type safety, scalability, and developer experience in mind. A batteries included Vite + React template.
 
 * pnpm - A strict and efficient alternative to npm with up to 3x faster performance
 * TypeScript - A typed superset of JavaScript designed with large scale applications in mind
 * ESLint(Airbnb) - Static code analysis to help find problems within a codebase
-* Vite - Feature rich and highly optimized frontend tooling with TypeScript support out of the box
+* Vite@4.4 - Feature rich and highly optimized frontend tooling with TypeScript support out of the box
+* SWC
 * Vitest - A blazing fast unit test framework powered by Vite
 * React Testing Library - A very light-weight, best practice first, solution for testing React components
 
 ## Requirements
 
-* NodeJS 18+
-* pnpm
+* NodeJS 14+
+* pnpm 7+
 
 ## Getting Started
 
@@ -30,6 +31,12 @@ Changing into the new directory
 
 ```
 cd vite-tsx-app
+```
+
+Changing vite verson
+
+```
+git checkout vite@4
 ```
 
 Removing the .git folder (and any additional files, folders or dependencies you may not need)
