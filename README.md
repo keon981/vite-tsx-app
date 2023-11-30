@@ -1,8 +1,8 @@
-# Vite@5 React simple template
+## React + TypeScript + Vite@5 template
 
-> pnpm + React 18 + TypeScript + Vitest + Testing Library + ESlint
+> This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- [vite@4 template](https://github.com/keon981/vite-tsx-app/tree/vite%404)
+- [Changing into the  template with React + TypeScript + Vite@5](https://github.com/keon981/vite-tsx-app/tree/vite%404)
 
 ## Overview
 
@@ -12,6 +12,7 @@
 * TypeScript - A typed superset of JavaScript designed with large scale applications in mind
 * ESLint(Airbnb) - Static code analysis to help find problems within a codebase
 * Vite@5- Feature rich and highly optimized frontend tooling with TypeScript support out of the box
+  - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 * Vitest@1.0.0-beta.5 - A blazing fast unit test framework powered by Vite
   * React Testing Library - A very light-weight, best practice first, solution for testing React components
   * MSW（Mock Service Worker） - Mocking API tools
