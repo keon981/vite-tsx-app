@@ -1,6 +1,8 @@
-# Vite React simple template
+# Vite@5 React simple template
 
 > pnpm + React 18 + TypeScript + Vitest + Testing Library + ESlint
+
+- [vite@4 template](https://github.com/keon981/vite-tsx-app/tree/vite%404)
 
 ## Overview
 
@@ -9,65 +11,46 @@
 * pnpm - A strict and efficient alternative to npm with up to 3x faster performance
 * TypeScript - A typed superset of JavaScript designed with large scale applications in mind
 * ESLint(Airbnb) - Static code analysis to help find problems within a codebase
-* Vite@4.4 - Feature rich and highly optimized frontend tooling with TypeScript support out of the box
-* SWC
-* Vitest - A blazing fast unit test framework powered by Vite
-* React Testing Library - A very light-weight, best practice first, solution for testing React components
+* Vite@5- Feature rich and highly optimized frontend tooling with TypeScript support out of the box
+* Vitest@1.0.0-beta.5 - A blazing fast unit test framework powered by Vite
+  * React Testing Library - A very light-weight, best practice first, solution for testing React components
+  * MSW（Mock Service Worker） - Mocking API tools
 
 ## Requirements
 
-* NodeJS 14+
+* NodeJS 18+
 * pnpm 7+
 
 ## Getting Started
 
-Getting started is a simple as cloning the repository
+1. Getting started is a simple as cloning the repository
+   ```
+   git clone git@github.com:keon981/vite-tsx-app.git
 
-```
-git clone git@github.com:keon981/vite-tsx-app.git
-```
-
-Changing into the new directory
-
-```
-cd vite-tsx-app
-```
-
-Changing vite verson
-
-```
-git checkout vite@4
-```
-
-Removing the .git folder (and any additional files, folders or dependencies you may not need)
-
-```
-rm -rf .git
-```
-
-Installing dependencies
-
-```
-pnpm install
-```
-
-And running the setup script (initializes git repository)
-
-```
-pnpm run setup
-```
+   ```
+2. Changing into the new directory
+   ```
+   cd vite-tsx-app
+   ```
+3. Installing dependencies
+   ```
+   pnpm install
+   ```
+4. Removing the .git folder (and any additional files, folders or dependencies you may not need)
+   ```
+   rm -rf .git
+   ```
 
 Congrats! You're ready to starting working on that new project!
 
-If you'd rather run the commands above in one go, check out the command below:
-
-```
-git clone git@github.com:keon981/vite-tsx-app.git &&\
-cd vite-tsx-app &&\
-rm -rf .git &&\
-pnpm install &&\
-pnpm run setup
-```
+> If you'd rather run the commands above in one go, check out the command below：
+>
+> ```
+> git clone git@github.com:keon981/vite-tsx-app.git &&\
+> cd vite-tsx-app &&\
+> pnpm install &&\
+> rm -rf .git &&\
+> ```
 
 ## Testing
 
