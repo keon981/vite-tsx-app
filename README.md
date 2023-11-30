@@ -50,7 +50,7 @@ Congrats! You're ready to starting working on that new project!
 > git clone git@github.com:keon981/vite-tsx-app.git &&\
 > cd vite-tsx-app &&\
 > pnpm install &&\
-> rm -rf .git &&\
+> rm -rf .git
 > ```
 
 ## Testing
