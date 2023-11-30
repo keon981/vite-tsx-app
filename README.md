@@ -64,6 +64,7 @@ If you'd rather run the commands above in one go, check out the command below:
 ```
 git clone git@github.com:keon981/vite-tsx-app.git &&\
 cd vite-tsx-app &&\
+git checkout vite@4 &&\
 rm -rf .git &&\
 pnpm install &&\
 pnpm run setup
