@@ -8,12 +8,24 @@
 
 > Built with type safety, scalability, and developer experience in mind. A batteries included Vite + React template.
 
-* pnpm - A strict and efficient alternative to npm with up to 3x faster performance
-* TypeScript - A typed superset of JavaScript designed with large scale applications in mind
-* ESLint(Airbnb) - Static code analysis to help find problems within a codebase
-* Vite@5- Feature rich and highly optimized frontend tooling with TypeScript support out of the box
-  - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-* Vitest@1.0.0-beta.5 - A blazing fast unit test framework powered by Vite
+* [⚡️](https://vitejs.dev/)**[Vite 5](https://github.com/vitejs/vite)** : for project building and running the dev server
+
+  * **[@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc)** uses [SWC](https://swc.rs/) for Fast Refresh
+* **[⚛️ ](https://reactjs.org/)[React 18](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/)**
+* **[🔨 Redux Toolkit](https://redux-toolkit.js.org/)** : for global state management
+
+  * RTK Query : for HTTP requests
+* 🏄 **[React-router 6](https://reactrouter.com/docs/en/v6/getting-started/overview)** : Declarative routing for React apps at any scale.
+* **[shadcn/ui](https://ui.shadcn.com)** : for React UI Components
+* **[iconify](https://iconify.design/)** - for UI icons
+* **ESLint** : for linting
+
+  * **[eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb-base)** and **[eslint-config-airbnb-typescript](https://www.npmjs.com/package/eslint-config-airbnb-typescript)** : ESLint configurations adhering to Airbnb's base JS style guide.
+  * **[eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)** : ESLint plugins that enforce ES2015+ import/export syntax .
+  * **[eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)** : Enforce accessibility best practices for React components.
+  * **[vite-plugin-eslint](https://www.npmjs.com/package/vite-plugin-eslint)** : Integrates ESLint into the Vite build process for on-the-fly linting.
+* Vitest@1 : for unit test
+
   * React Testing Library - A very light-weight, best practice first, solution for testing React components
   * MSW（Mock Service Worker） - Mocking API tools
 
