@@ -49,7 +49,7 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ['*.config.ts', '*/*/setup.ts'],
+  ignorePatterns: ['*.config.ts', '*.config.js', '*/*/setup.ts', 'public/*/*.js', 'dist'],
   rules: {
     '@typescript-eslint/semi': ['error', 'never'],
     'import/no-absolute-path': 'off',

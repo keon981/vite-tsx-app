@@ -9,3 +9,4 @@
  .eslintrc.cjs
  .eslintrc.js
  *.eslintrc
+ *.config.js

@@ -2,6 +2,15 @@
   "extends": "./tsconfig.json",
   "include": [
     "src",
-    ".eslintrc.cjs"
-  ]
+    ".eslintrc.cjs",
+    "tailwind.config.js"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  }
 }

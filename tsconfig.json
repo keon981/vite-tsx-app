@@ -21,8 +21,8 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@": [
-        "src/"
+      "@/*": [
+        "./src/*"
       ]
     },
     "types": [
@@ -34,7 +34,7 @@
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
   ],
   "references": [
     {
