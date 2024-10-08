@@ -22,6 +22,7 @@ export default defineConfig({
     includeSource: ["src/__tests__/*.{js,tsx,ts}"],
     setupFiles: 'src/__tests__/setup.ts',
     coverage: {
+      provider: "v8",
       reporter: ["text", "json", "html"],
     },
   },
