@@ -64,5 +64,5 @@ export default {
       }
     }
   },
-  plugins: [tailwindcssAnimate, require("tailwindcss-animate")], // 使用 import 語法
+  plugins: [tailwindcssAnimate], // 使用 import 語法
 }
