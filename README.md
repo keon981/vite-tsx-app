@@ -67,7 +67,7 @@ cd vite-tsx-app &&\
 git checkout vite@4 &&\
 rm -rf .git &&\
 pnpm install &&\
-pnpm run setup
+git init
 ```
 
 ## Testing
