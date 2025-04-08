@@ -1,8 +1,13 @@
-## React + TypeScript + Vite@5 template
+# React + TypeScript + Vite@6 template
 
 > This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- [Changing into the  template with React + TypeScript + Vite@5](https://github.com/keon981/vite-tsx-app/tree/vite%404)
+- [中文版](./docs/README.zh-TW.md)
+
+## Requirements
+
+* NodeJS v20+
+* pnpm v9+
 
 ## Overview
 
@@ -11,28 +16,23 @@
 * [⚡️](https://vitejs.dev/)**[Vite 5](https://github.com/vitejs/vite)** : for project building and running the dev server
 
   * **[@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc)** uses [SWC](https://swc.rs/) for Fast Refresh
-* **[⚛️ ](https://reactjs.org/)[React 18](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/)**
-* **[🔨 Redux Toolkit](https://redux-toolkit.js.org/)** : for global state management
-
-  * RTK Query : for HTTP requests
-* 🏄 **[React-router 6](https://reactrouter.com/docs/en/v6/getting-started/overview)** : Declarative routing for React apps at any scale.
+* **[⚛️ ](https://reactjs.org/)[React 19](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/)**
+* 🏄 **[React-router v7.5+](https://reactrouter.com/docs/en/v6/getting-started/overview)** : Declarative routing for React apps at any scale.
 * **[shadcn/ui](https://ui.shadcn.com)** : for React UI Components
-* **[iconify](https://iconify.design/)** - for UI icons
-* **ESLint** : for linting
+* **[Tailwind CSS](https://tailwindcss.com/)**：for styling
+* **ESLint v9.5.0+**: for linting and formatting
 
-  * **[eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb-base)** and **[eslint-config-airbnb-typescript](https://www.npmjs.com/package/eslint-config-airbnb-typescript)** : ESLint configurations adhering to Airbnb's base JS style guide.
-  * **[eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)** : ESLint plugins that enforce ES2015+ import/export syntax .
-  * **[eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)** : Enforce accessibility best practices for React components.
+  * **[@antfu/eslint-config](https://github.com/antfu/eslint-config/tree/main)**: This project uses `@antfu/eslint-config` as its base ESLint configuration to maintain code quality and consistency.
+    * Auto fix for formatting (aimed to be used standalone without Prettier)
+    * Powered by [eslint-plugin-command](https://github.com/antfu/eslint-plugin-command). It is not a typical rule for linting, but an on-demand micro-codemod tool that triggers by specific comments.
+    * Style principle: Minimal for reading, stable for diff, consistent
+      * Sorted imports, dangling commas
+      * Using ESLint Stylistic
   * **[vite-plugin-eslint](https://www.npmjs.com/package/vite-plugin-eslint)** : Integrates ESLint into the Vite build process for on-the-fly linting.
-* Vitest@1 : for unit test
+* Vitest : for unit test
 
   * React Testing Library - A very light-weight, best practice first, solution for testing React components
   * MSW（Mock Service Worker） - Mocking API tools
-
-## Requirements
-
-* NodeJS 18+
-* pnpm 7+
 
 ## Getting Started
 

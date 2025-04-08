@@ -1,34 +1,35 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite'
-// import react from '@vitejs/plugin-react'
-import react from "@vitejs/plugin-react-swc";
-import tsconfigPaths from 'vite-tsconfig-paths'
-import path from "path"
 
-// https://vitejs.dev/config/
+import path from 'node:path'
+
+import tailwindcss from '@tailwindcss/vite'
+import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from 'vite'
+
+// https://vite.dev/config/
 export default defineConfig({
-  base: '/', 
+  base: '/',
   plugins: [
     react(),
-    tsconfigPaths(),
+    tailwindcss(),
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"),
+      '@': path.resolve(__dirname, './src'),
     },
   },
   test: {
     globals: true,
-    environment: "jsdom",
-    includeSource: ["src/__tests__/*.{js,tsx,ts}"],
+    environment: 'jsdom',
+    includeSource: ['src/__tests__/*.{js,tsx,ts}'],
     setupFiles: 'src/__tests__/setup.ts',
     coverage: {
-      provider: "v8",
-      reporter: ["text", "json", "html"],
+      provider: 'v8',
+      reporter: ['text', 'json', 'html'],
     },
   },
   server: {
-    host: "0.0.0.0",
-    port: 8080
+    host: '0.0.0.0',
+    port: 8080,
   },
 })
