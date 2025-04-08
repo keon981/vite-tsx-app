@@ -16,7 +16,7 @@
 * [⚡️](https://vitejs.dev/)**[Vite 5](https://github.com/vitejs/vite)** : for project building and running the dev server
 
   * **[@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc)** uses [SWC](https://swc.rs/) for Fast Refresh
-* **[⚛️ ](https://reactjs.org/)[React 18](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/)**
+* **[⚛️ ](https://reactjs.org/)[React 19](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/)**
 * 🏄 **[React-router v7.5+](https://reactrouter.com/docs/en/v6/getting-started/overview)** : Declarative routing for React apps at any scale.
 * **[shadcn/ui](https://ui.shadcn.com)** : for React UI Components
 * **[Tailwind CSS](https://tailwindcss.com/)**：for styling
