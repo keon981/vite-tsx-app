@@ -1,9 +1,10 @@
 {
-  "name": "vite-tsx-app",
+  "name": "vite-app",
   "type": "module",
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "start": "node bin/index.js",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
@@ -13,7 +14,11 @@
     "test:unit": "vitest src/",
     "test:watch": "vitest watch",
     "test:ui": "vitest --ui",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "publish:local": "pnpm publish --registry http://localhost:4873"
+  },
+  "bin": {
+    "vite-app": "./bin/index.js"
   },
   "lint-staged": {
     "*": "eslint --fix"
