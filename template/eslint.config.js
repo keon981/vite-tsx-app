@@ -26,17 +26,8 @@ export default antfu({
     'style/jsx-child-element-spacing': 'off',
     'brace-style': ['error', '1tbs'],
     'no-console': 'warn',
-    'style/object-curly-newline': ['error', {
-      ObjectExpression: 'always',
-      ObjectPattern: {
-        multiline: true,
-      },
-      ImportDeclaration: 'never',
-      ExportDeclaration: {
-        multiline: true,
-        minProperties: 3,
-      },
-    }],
+    'no-nested-ternary': 'error',
+    'antfu/if-newline': 'off',
   },
 })
   .overrides({

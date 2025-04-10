@@ -1,7 +1,7 @@
 {
-  "name": "create-keon-vite-app",
-  "version": "0.0.10",
-  "description": "Example starter template tool",
+  "name": "vite-starter",
+  "version": "0.0.1",
+  "description": "Vite React starter APP tool",
   "scripts": {
     "start": "node bin/index.js",
     "publish:local": "pnpm publish --no-git-checks --registry http://localhost:4873"
@@ -13,10 +13,16 @@
     "new-template": "./bin/index.js"
   },
   "keywords": [
-    "template"
+    "vite",
+    "react",
+    "template",
+    "create-app",
+    "scaffold",
+    "cli",
+    "starter"
   ],
-  "license": "MIT",
   "dependencies": {
-    "cross-spawn": "^7.0.3"
+    "cross-spawn": "^7.0.3",
+    "fs-extra": "^11.3.0"
   }
 }

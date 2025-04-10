@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
-const spawn = require('cross-spawn');
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
 
 // The first argument will be the project name.
@@ -11,45 +10,50 @@ const projectName = process.argv[2];
 const currentDir = process.cwd();
 const projectDir = path.resolve(currentDir, projectName);
 
-if (!fs.existsSync(projectDir)) {
-  fs.mkdirSync(projectDir, { recursive: true });
-} else {
+if (fs.existsSync(projectDir)) {
   console.error(`Error: Directory ${projectName} already exists.`);
   process.exit(1);
 }
 
-// A common approach to building a starter template is to
-// create a `template` folder which will house the template
-// and the files we want to create.
+fs.ensureDirSync(projectDir); // creates if not exists
+
+/**
+ * Store the base project structure inside a `template` folder.
+ * This folder contains all files to scaffold a new project.
+ */
 const templateDir = path.resolve(__dirname, '../template');
 fs.cpSync(templateDir, projectDir, { recursive: true, });
 
-// It is good practice to have dotfiles stored in the
-// template without the dot (so they do not get picked
-// up by the starter template repository). We can rename
-// the dotfiles after we have copied them over to the
-// new project directory.
-fs.renameSync(
-  path.join(projectDir, 'gitignore'),
-  path.join(projectDir, '.gitignore')
-);
+/** To avoid dotfiles being included in the template repo,
+  we store them without a dot and rename them after copying. */
+['gitignore', 'npmrc'].forEach((file) => {
+  fs.renameSync(
+    path.join(projectDir, file),
+    path.join(projectDir, `.${file}`)
+  );
+});
 
 const projectPackageJsonPath = path.join(projectDir, 'package.json');
-const projectPackageJson = require(projectPackageJsonPath);
+const projectPackageJson = fs.readJsonSync(projectPackageJsonPath);
 
-// Update the project's package.json with the new project name
 projectPackageJson.name = projectName;
 
-fs.writeFileSync(
-  projectPackageJsonPath,
-  JSON.stringify(projectPackageJson, null, 2)
-);
 
-// Run `npm install` in the project directory to install
-// the dependencies. We are using a third-party library
-// called `cross-spawn` for cross-platform support.
-// (Node has issues spawning child processes in Windows).
-// spawn.sync('npm', ['install'], { stdio: 'inherit', cwd: projectDir });
+projectPackageJson.version = "0.0.1";
 
-console.log('Success! Your new project is ready.');
-console.log(`Created ${projectName} at ${projectDir}`);
+fs.writeJsonSync(projectPackageJsonPath, projectPackageJson, { spaces: 2 });
+
+console.log(`
+  Success! ${projectName} is ready.
+  To get started:
+    cd ${projectName}
+    npm install
+    npm run dev
+  or
+    yarn
+    yarn dev
+  or
+    pnpm
+    pnpm dev
+  Happy coding!
+`);

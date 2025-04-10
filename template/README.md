@@ -90,3 +90,8 @@ If instead you are interested in coverage reporting, run:
 ```
 pnpm run coverage
 ```
+
+
+## License
+
+No License. You can use this starter as you wish.
