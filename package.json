@@ -13,7 +13,13 @@
     "new-template": "./bin/index.js"
   },
   "keywords": [
-    "template"
+    "vite",
+    "react",
+    "template",
+    "create-app",
+    "scaffold",
+    "cli",
+    "starter"
   ],
   "dependencies": {
     "cross-spawn": "^7.0.3",
