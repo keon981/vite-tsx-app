@@ -20,7 +20,7 @@ Example project to showcase how to build your own `create-keon-app` npx starter 
 
 3. In a separate terminal, publish the CLI package to your local Verdaccio:
    ```bash
-   cd vite-tsx-app &&\
+   cd vite-react-starter &&\
    pnpm run publish:local
    ```
 
